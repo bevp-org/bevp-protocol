@@ -7,5 +7,6 @@ license = "BUSL-1.1"
 repository = "https://github.com/bevp-org/bevp-protocol"
 homepage = "https://bevp.org"
 documentation = "https://docs.rs/bevp-protocol"
+readme = "README.md"
 
 [dependencies]

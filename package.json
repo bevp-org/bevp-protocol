@@ -8,7 +8,11 @@
   ],
   "scripts": {
     "test": "npm run test --workspaces --if-present",
-    "build": "npm run build --workspaces --if-present"
+    "build": "npm run build --workspaces --if-present",
+    "release:cargo": "./scripts/release.sh cargo",
+    "release:npm": "./scripts/release.sh npm",
+    "release": "./scripts/release.sh both",
+    "release:dry": "./scripts/release.sh both --dry-run"
   },
   "author": "BEVP Foundation",
   "license": "BUSL-1.1",

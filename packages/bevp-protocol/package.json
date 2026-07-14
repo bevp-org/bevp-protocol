@@ -4,8 +4,11 @@
   "description": "Bitcoin Experience Validation Protocol - JS/TS Client SDK",
   "main": "src/index.js",
   "types": "src/index.d.ts",
+  "files": [
+    "src"
+  ],
   "scripts": {
-    "test": "node --test",
+    "test": "node --test 'test/**/*.test.js'",
     "build": "echo \"No build step yet\""
   },
   "keywords": [
