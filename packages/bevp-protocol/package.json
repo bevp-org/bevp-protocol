@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "files": [
-    "src"
+    "src",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "test": "node --test 'test/**/*.test.js'",

@@ -13,4 +13,4 @@ npm install bevp-protocol
 const { add } = require('bevp-protocol');
 ```
 
-See the [monorepo README](../../README.md) for release instructions.
+License: [BUSL-1.1](./LICENSE). See the [monorepo README](../../README.md) for release instructions.

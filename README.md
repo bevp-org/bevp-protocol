@@ -1,27 +1,41 @@
-# bevp-protocol
+# BEVP: Bitcoin Experience Validation Protocol
 
-Bitcoin Experience Validation Protocol — monorepo for the Rust core crate and the JS/TS client SDK.
+> Bitcoin gives wealth an immutable past; BEVP gives life an unforgotten past.  
+> 比特币让财富拥有不可篡改的过去；BEVP 让人生拥有不可遗忘的过去。
 
 | Package | Registry | Path |
 |---------|----------|------|
-| `bevp-protocol` (Rust) | [crates.io](https://crates.io/crates/bevp-protocol) | `crates/bevp-protocol` |
-| `bevp-protocol` (JS/TS) | [npm](https://www.npmjs.com/package/bevp-protocol) | `packages/bevp-protocol` |
+| `bevp-protocol` (Rust) | [crates.io](https://crates.io/crates/bevp-protocol) | [`crates/bevp-protocol`](./crates/bevp-protocol) |
+| `bevp-protocol` (JS/TS) | [npm](https://www.npmjs.com/package/bevp-protocol) | [`packages/bevp-protocol`](./packages/bevp-protocol) |
 
-Repository: https://github.com/bevp-org/bevp-protocol  
-Homepage: https://bevp.org
+Homepage: [https://bevp.org](https://bevp.org) · Repository: [github.com/bevp-org/bevp-protocol](https://github.com/bevp-org/bevp-protocol)
 
-## Layout
+---
+
+## ✦ Core Pillars (四大支柱)
+
+- **Trust (可信)**: Time-anchored via OpenTimestamps on the physical PoW of Bitcoin.
+- **Family (家庭)**: A flowing chronicle mapped via client-side Merkle-DAG.
+- **Privacy (私密)**: Absolute zero-knowledge end-to-end encryption (E2EE) and NIP-17 metadata wrapping.
+- **Heritage (传承)**: Digital legacy transition powered by Shamir Secret Sharing and relative time-locks (CSV).
+
+## ✦ Repository Structure
 
 ```text
 bevp-protocol/
+├── LICENSE                    # BUSL-1.1
 ├── Cargo.toml                 # Rust workspace
 ├── package.json               # npm workspaces root
-├── crates/bevp-protocol/      # crates.io package
-├── packages/bevp-protocol/    # npm package
-└── scripts/release.sh         # publish helper
+├── crates/bevp-protocol/      # Core Rust protocol (crates.io)
+├── packages/bevp-protocol/    # JS/TS client SDK (npm)
+├── scripts/release.sh         # Publish helper
+└── .github/SECURITY.md        # Vulnerability disclosure policy
 ```
 
-## Develop
+- `/crates/bevp-protocol` — Core Rust protocol implementation (published on crates.io).
+- `/packages/bevp-protocol` — JS/TS client SDK (published on npm).
+
+## ✦ Develop
 
 ```bash
 # Rust
@@ -31,9 +45,7 @@ cargo test -p bevp-protocol
 npm test -w bevp-protocol
 ```
 
-## Git remote (SSH Host alias)
-
-If you use a dedicated deploy key:
+## ✦ Git remote (SSH Host alias)
 
 ```sshconfig
 Host github.com-bevp
@@ -46,65 +58,34 @@ Host github.com-bevp
 git remote set-url origin git@github.com-bevp:bevp-org/bevp-protocol.git
 ```
 
-## Release
+## ✦ Release
 
 Prerequisites:
 
-- crates.io: `cargo login` (token with publish scope)
-- npm: `npm login` (account that owns `bevp-protocol`)
-- npm 2FA: pass `--otp <code>`, or `NPM_OTP=<code> ./scripts/release.sh npm`
+- crates.io: `cargo login`
+- npm: `npm login` (owner of `bevp-protocol`)
+- npm 2FA: `--otp <code>` or `NPM_OTP=<code>`
 - clean git working tree on `main`
-- push access via the SSH remote above
-
-### One-shot publish (recommended)
 
 ```bash
-# Publish whatever versions are currently in the manifests
-./scripts/release.sh cargo
-./scripts/release.sh npm
-./scripts/release.sh both
-
-# Bump then publish
-./scripts/release.sh cargo patch
-./scripts/release.sh npm minor
-./scripts/release.sh both 0.2.0
-
-# Verify without uploading
-./scripts/release.sh cargo --dry-run
-./scripts/release.sh npm --dry-run
+./scripts/release.sh cargo              # publish current crate version
+./scripts/release.sh npm --otp XXXXXX   # publish current npm version
+./scripts/release.sh both patch --otp XXXXXX
+./scripts/release.sh both --dry-run
 ```
 
-The script will:
+Tags: `crate-vX.Y.Z` / `npm-vX.Y.Z`. Crate and npm versions are independent.
 
-1. optionally bump the version (`patch` / `minor` / `major` / `X.Y.Z`)
-2. run tests
-3. commit the bump (if any)
-4. `cargo publish` and/or `npm publish`
-5. create annotated tags: `crate-vX.Y.Z` and/or `npm-vX.Y.Z`
-6. `git push origin main --follow-tags`
+## ✦ Security
 
-### Manual publish
+Please report vulnerabilities privately — see [SECURITY.md](./.github/SECURITY.md).  
+Contact: **security@bevp.org** (do not open a public issue for security bugs).
 
-```bash
-# crates.io
-cargo test -p bevp-protocol
-cargo publish -p bevp-protocol
-git tag -a crate-v0.1.1 -m "Release crate bevp-protocol 0.1.1"
-git push origin main --follow-tags
+## ✦ License
 
-# npm
-npm test -w bevp-protocol
-npm publish -w bevp-protocol --access public
-git tag -a npm-v1.0.1 -m "Release npm bevp-protocol 1.0.1"
-git push origin main --follow-tags
-```
+This project is licensed under the [Business Source License 1.1](./LICENSE) (BUSL-1.1).
 
-### Version notes
-
-- Crate and npm versions are **independent** (today: crate `0.1.x`, npm `1.0.x`).
-- Every crates.io / npm upload needs a **new** version number.
-- Registry pages pick up GitHub links from `repository` / `homepage` metadata in each package manifest.
-
-## License
-
-BUSL-1.1
+- Licensor: BEVP Foundation Ltd.
+- Change Date: 2029-07-14
+- Change License: Apache License, Version 2.0
+- Additional Use Grant: Non-commercial use and individual private self-hosting are permitted.
