@@ -52,6 +52,7 @@ Prerequisites:
 
 - crates.io: `cargo login` (token with publish scope)
 - npm: `npm login` (account that owns `bevp-protocol`)
+- npm 2FA: pass `--otp <code>`, or `NPM_OTP=<code> ./scripts/release.sh npm`
 - clean git working tree on `main`
 - push access via the SSH remote above
 

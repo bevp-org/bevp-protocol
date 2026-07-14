@@ -3,14 +3,17 @@
 #
 # Usage:
 #   ./scripts/release.sh cargo [patch|minor|major|X.Y.Z] [--dry-run]
-#   ./scripts/release.sh npm   [patch|minor|major|X.Y.Z] [--dry-run]
-#   ./scripts/release.sh both  [patch|minor|major|X.Y.Z] [--dry-run]
+#   ./scripts/release.sh npm   [patch|minor|major|X.Y.Z] [--dry-run] [--otp CODE]
+#   ./scripts/release.sh both  [patch|minor|major|X.Y.Z] [--dry-run] [--otp CODE]
 #
 # Examples:
 #   ./scripts/release.sh cargo              # publish current crate version
 #   ./scripts/release.sh npm patch          # bump npm patch, then publish
+#   ./scripts/release.sh npm --otp 123456   # publish npm with 2FA code
 #   ./scripts/release.sh both 0.2.0         # set both to 0.2.0 and publish
 #   ./scripts/release.sh cargo --dry-run    # verify only
+#
+# Tip: for npm 2FA, either pass --otp <code> or set NPM_OTP.
 
 set -euo pipefail
 
@@ -22,6 +25,7 @@ NPM_PKG="packages/bevp-protocol"
 DRY_RUN=0
 TARGET=""
 BUMP=""
+OTP="${NPM_OTP:-}"
 
 die() { echo "error: $*" >&2; exit 1; }
 
@@ -44,6 +48,14 @@ parse_args() {
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --dry-run) DRY_RUN=1 ;;
+      --otp)
+        [[ $# -ge 2 ]] || die "--otp requires a code"
+        OTP="$2"
+        shift
+        ;;
+      --otp=*)
+        OTP="${1#--otp=}"
+        ;;
       -h|--help) usage 0 ;;
       patch|minor|major|[0-9]*.[0-9]*.[0-9]*)
         [[ -z "$BUMP" ]] || die "bump already set to '$BUMP'"
@@ -153,7 +165,11 @@ publish_npm() {
     return
   fi
 
-  npm publish -w bevp-protocol --access public
+  local args=(publish -w bevp-protocol --access public)
+  if [[ -n "$OTP" ]]; then
+    args+=(--otp "$OTP")
+  fi
+  npm "${args[@]}"
   git tag -a "npm-v${version}" -m "Release npm bevp-protocol ${version}"
   echo "tagged npm-v${version}"
 }
