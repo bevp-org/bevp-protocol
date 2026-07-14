@@ -1,0 +1,11 @@
+[package]
+name = "bevp-protocol"
+version = "0.1.1"
+edition = "2024"
+description = "Bitcoin Experience Validation Protocol - Core Rust Implementation."
+license = "BUSL-1.1"
+repository = "https://github.com/bevp-org/bevp-protocol"
+homepage = "https://bevp.org"
+documentation = "https://docs.rs/bevp-protocol"
+
+[dependencies]

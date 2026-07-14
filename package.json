@@ -1,0 +1,23 @@
+{
+  "name": "bevp-protocol-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Bitcoin Experience Validation Protocol - monorepo (Rust + JS/TS)",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "author": "BEVP Foundation",
+  "license": "BUSL-1.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevp-org/bevp-protocol.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bevp-org/bevp-protocol/issues"
+  },
+  "homepage": "https://github.com/bevp-org/bevp-protocol#readme"
+}

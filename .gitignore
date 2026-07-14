@@ -1,0 +1,19 @@
+# Rust
+/target
+**/target
+
+# Node / NPM
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Env / secrets
+.env
+.env.*

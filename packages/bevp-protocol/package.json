@@ -1,0 +1,29 @@
+{
+  "name": "bevp-protocol",
+  "version": "1.0.1",
+  "description": "Bitcoin Experience Validation Protocol - JS/TS Client SDK",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "node --test",
+    "build": "echo \"No build step yet\""
+  },
+  "keywords": [
+    "bevp",
+    "bitcoin",
+    "cryptography",
+    "vows"
+  ],
+  "author": "BEVP Foundation",
+  "license": "BUSL-1.1",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevp-org/bevp-protocol.git",
+    "directory": "packages/bevp-protocol"
+  },
+  "bugs": {
+    "url": "https://github.com/bevp-org/bevp-protocol/issues"
+  },
+  "homepage": "https://github.com/bevp-org/bevp-protocol#readme"
+}
