@@ -6,7 +6,11 @@
 | Package | Registry | Path |
 |---------|----------|------|
 | `bevp-protocol` (Rust) | [crates.io](https://crates.io/crates/bevp-protocol) | [`crates/bevp-protocol`](./crates/bevp-protocol) |
-| `bevp-protocol` (JS/TS) | [npm](https://www.npmjs.com/package/bevp-protocol) | [`packages/bevp-protocol`](./packages/bevp-protocol) |
+| `@bevp/crypto` | npm (scoped) | [`packages/bevp-crypto`](./packages/bevp-crypto) |
+| `@bevp/core` | npm (scoped) | [`packages/bevp-core`](./packages/bevp-core) |
+| `@bevp/ots` | npm (scoped) | [`packages/bevp-ots`](./packages/bevp-ots) |
+| `@bevp/relay-client` | npm (scoped) | [`packages/bevp-relay-client`](./packages/bevp-relay-client) |
+| `bevp-protocol` (JS umbrella) | [npm](https://www.npmjs.com/package/bevp-protocol) | [`packages/bevp-protocol`](./packages/bevp-protocol) |
 
 Homepage: [https://bevp.org](https://bevp.org) · Repository: [github.com/bevp-org/bevp-protocol](https://github.com/bevp-org/bevp-protocol)
 
@@ -27,13 +31,23 @@ bevp-protocol/
 ├── Cargo.toml                 # Rust workspace
 ├── package.json               # npm workspaces root
 ├── crates/bevp-protocol/      # Core Rust protocol (crates.io)
-├── packages/bevp-protocol/    # JS/TS client SDK (npm)
+├── packages/
+│   ├── bevp-crypto/           # @bevp/crypto — SHA-256 digests
+│   ├── bevp-core/             # @bevp/core — vow commitments (+ media digests)
+│   ├── bevp-ots/              # @bevp/ots — OpenTimestamps stamp/upgrade/verify
+│   ├── bevp-relay-client/     # @bevp/relay-client — pay/queue/rush thin client
+│   └── bevp-protocol/         # umbrella re-exports (legacy npm name)
 ├── scripts/release.sh         # Publish helper
-└── .github/SECURITY.md        # Vulnerability disclosure policy
+└── .github/SECURITY.md
 ```
 
-- `/crates/bevp-protocol` — Core Rust protocol implementation (published on crates.io).
-- `/packages/bevp-protocol` — JS/TS client SDK (published on npm).
+- `/packages/bevp-crypto` — Shared hashing (`sha256Hex`, `shortHash`).
+- `/packages/bevp-core` — Stage 1 `commitVow` / `bevp:vow:v1` evidence roots.
+- `/packages/bevp-ots` — OTS stamp / upgrade / verify (public calendars; Signet needs custom URLs).
+- `/packages/bevp-relay-client` — Sponsor Relay pay intent + stamp job client (mock or HTTP).
+- `/packages/bevp-crypto` also exports Shamir 2-of-3 + Passkey helpers.
+- `/packages/bevp-core` also exports Merkle-DAG root/proof helpers.
+- Calendar Gas / Stripe secrets stay in private `bevp-relay-server`.
 
 ## ✦ Develop
 
@@ -42,7 +56,10 @@ bevp-protocol/
 cargo test -p bevp-protocol
 
 # JS/TS
-npm test -w bevp-protocol
+npm install
+npm test
+npm test -w @bevp/crypto
+npm test -w @bevp/core
 ```
 
 ## ✦ Git remote (SSH Host alias)

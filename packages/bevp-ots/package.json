@@ -1,9 +1,16 @@
 {
-  "name": "bevp-protocol",
-  "version": "1.1.0",
-  "description": "Bitcoin Experience Validation Protocol - JS/TS Client SDK (umbrella)",
+  "name": "@bevp/ots",
+  "version": "0.1.0",
+  "description": "BEVP OpenTimestamps client — stamp, upgrade, verify experience digests",
+  "type": "module",
   "main": "src/index.js",
   "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
   "files": [
     "src",
     "LICENSE",
@@ -15,21 +22,20 @@
   },
   "keywords": [
     "bevp",
-    "bitcoin",
-    "cryptography",
-    "vows"
+    "opentimestamps",
+    "ots",
+    "bitcoin"
   ],
   "author": "BEVP Foundation",
   "license": "BUSL-1.1",
-  "type": "commonjs",
   "dependencies": {
-    "@bevp/core": "0.1.0",
-    "@bevp/crypto": "0.1.0"
+    "@bevp/crypto": "0.1.0",
+    "@vitrified/typescript-opentimestamps": "0.2.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bevp-org/bevp-protocol.git",
-    "directory": "packages/bevp-protocol"
+    "directory": "packages/bevp-ots"
   },
   "bugs": {
     "url": "https://github.com/bevp-org/bevp-protocol/issues"

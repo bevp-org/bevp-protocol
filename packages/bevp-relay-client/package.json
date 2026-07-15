@@ -1,0 +1,27 @@
+{
+  "name": "@bevp/relay-client",
+  "version": "0.1.0",
+  "description": "Thin BEVP Sponsor Relay client — pay intent, queue/rush stamp jobs (no server secrets)",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": ["src", "LICENSE", "README.md"],
+  "scripts": {
+    "test": "node --test 'test/**/*.test.js'",
+    "build": "echo \"No build step yet\""
+  },
+  "keywords": ["bevp", "relay", "payment", "opentimestamps"],
+  "author": "BEVP Foundation",
+  "license": "BUSL-1.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevp-org/bevp-protocol.git",
+    "directory": "packages/bevp-relay-client"
+  }
+}
