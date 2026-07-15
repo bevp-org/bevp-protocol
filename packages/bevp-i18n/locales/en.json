@@ -1,0 +1,205 @@
+{
+  "protocol": {
+    "name": "BEVP (Bitcoin Experience Validation Protocol)",
+    "tagline": "Make experience transcend time; preserve life's meaning through physical consensus",
+    "slogan": "Bitcoin gives wealth an immutable past; BEVP gives life an unforgotten past.",
+    "poweredBy": "Powered by BEVP",
+    "pillars": {
+      "trust": "Trust",
+      "actual": "Actual",
+      "privacy": "Privacy",
+      "heritage": "Heritage"
+    }
+  },
+  "stages": {
+    "vows": {
+      "title": "Eternal Vows",
+      "tagline": "Seal our genesis promise in the inexorable flow of time.",
+      "desc": "Transform promises into an irreversible off-chain state, invisibly anchored on Bitcoin mainnet."
+    },
+    "vault": {
+      "title": "Eternal Vault",
+      "tagline": "A private chronicle of your family's steps.",
+      "desc": "A continuous record of life's path driven by family multi-keys on a Merkle-DAG."
+    },
+    "heritage": {
+      "title": "Eternal Heritage",
+      "tagline": "Digital legacy secured by mathematical laws and time-locks.",
+      "desc": "Securely transfer memories and assets using Shamir sharing and time-lock release."
+    },
+    "shield": {
+      "title": "Reality Shield",
+      "tagline": "Certificates of origin for human experience in the age of synthetic minds.",
+      "desc": "Verify physical existence through spatiotemporal entropy cross-validation."
+    }
+  },
+  "legal": {
+    "framework": "RUFADAA & Property (Digital Assets etc) Act 2025 Template",
+    "executor": "Digital Executor",
+    "custodian": "Fiduciary",
+    "guardian": "Legal Guardian",
+    "document_title": "Digital Will & Letter of Wishes",
+    "disclaimer": "This letter of wishes is for use with your formal will and counsel. It is not legal advice and does not by itself create a valid will.",
+    "time_lock_warning": "Time-lock is active. No external mechanism can decrypt this archive prior to the designated block height."
+  },
+  "common": {
+    "seal": "Seal in Time",
+    "close": "Close",
+    "sign": "Sign",
+    "reject": "Reject",
+    "open": "Open",
+    "add": "Add",
+    "cancel": "Cancel",
+    "locked": "Locked",
+    "verifying": "Comparing with Bitcoin blocks...",
+    "verify_success": "Experience validated! This data did exist at the designated block height and remains untampered.",
+    "backup_prompt": "Download and keep your offline Verifier so you can still check proofs without the platform."
+  },
+  "nav": {
+    "primary": "Primary",
+    "vows": "Vows",
+    "vault": "TimeTree",
+    "heritage": "Heritage",
+    "shield": "Shield"
+  },
+  "lang": {
+    "label": "Language",
+    "en": "EN",
+    "zh": "中文"
+  },
+  "pwa": {
+    "vows": {
+      "pageTitle": "Create Your Eternal Vow",
+      "history": "Vow history",
+      "partnerA": "Partner 1",
+      "partnerB": "Partner 2",
+      "vowAria": "Vow text",
+      "defaultText": "In this irreversible span of time, we promise...",
+      "recordVoice": "Record voice",
+      "stopRecording": "Stop recording",
+      "uploadPhoto": "Upload photo",
+      "removePhoto": "Remove photo",
+      "removeAudio": "Remove audio",
+      "photoBytes": "Photo · {n} B",
+      "voiceBytes": "Voice · {n} B",
+      "recording": "Recording…",
+      "micDenied": "Microphone permission denied or unavailable.",
+      "anchorTier": "Anchor tier",
+      "tierQueue": "Queue · {fee} (batch)",
+      "tierRush": "Rush · {fee} (priority)",
+      "relayMode": "Relay · {mode}",
+      "statusAnchored": "anchored",
+      "statusPending": "pending queue",
+      "statusLocal": "local",
+      "anchorProgress": "Anchor Progress",
+      "hashing": "Hashing vow + media digests…",
+      "relayPay": "Relay pay ({fee}, {mode})…",
+      "relayJob": "Relay job {id}… · {status} · submitting OTS ({network})…",
+      "relayFail": "Relay pay failed: {message}",
+      "calendarUnreachable": "Calendar unreachable — sandbox proof. {message}",
+      "upgradeTry": "Trying calendar upgrade…",
+      "attested": "Bitcoin attestation available.",
+      "stampStored": "Stamp stored — upgrade when calendars confirm.",
+      "submitOts": "Submitting to OTS calendars ({network})…"
+    },
+    "seal": {
+      "drag": "Drag to Seal & Anchor",
+      "waiting": "Waiting for Seal",
+      "sealing": "Sealing…",
+      "sealed": "Sealed (local)",
+      "aria": "Slide to seal vow"
+    },
+    "anchor": {
+      "step1": "Local evidence root (SHA-256)",
+      "step2": "OTS calendar stamp",
+      "step3": "Bitcoin attestation (upgrade)",
+      "inProgress": "In progress…",
+      "sandboxPending": "Sandbox pending (offline).",
+      "upgraded": "Calendar proof upgraded.",
+      "pendingAgg": "Pending calendar aggregation.",
+      "verifiable": "Independently verifiable Bitcoin attestation.",
+      "waitingBlock": "Waiting for block inclusion — Free / TESTNET watermark applies until then."
+    },
+    "cert": {
+      "title": "Digital Parchment Certificate",
+      "evidenceRoot": "Evidence Root",
+      "sealedAt": "Sealed At",
+      "photoDigest": "Photo Digest",
+      "audioDigest": "Audio Digest",
+      "otsStatus": "OTS Status",
+      "blockHeight": "Block Height",
+      "attested": "Attested",
+      "wmLocal": "Free · local seal only",
+      "wmAnchored": "Anchored · verify offline with Verifier",
+      "wmSandbox": "Free / Sandbox · not Bitcoin-anchored",
+      "wmPending": "Free / Pending · calendar stamp (not yet independently verifiable)",
+      "disclaimer": "Do not claim “permanently on Bitcoin mainnet” until OTS status is upgraded.",
+      "downloadOts": "Download .ots proof",
+      "openVerifier": "Open Offline Verifier",
+      "close": "Close Certificate",
+      "closeAria": "Close certificate"
+    },
+    "vault": {
+      "pageTitle": "Our Family TimeTree",
+      "cosign": "Bob is requesting a signature for 'Family Dinner' — MuSig2",
+      "addMoment": "Add a moment",
+      "notePlaceholder": "A small joy worth remembering…",
+      "defaultNote": "Today’s small joy",
+      "preview": "Vault preview — full family ARR is Stage 2.",
+      "verifyBlock": "Verify Block",
+      "viewNodeHash": "View Node Hash",
+      "verifySignature": "Verify Signature",
+      "addNoteTitle": "Add today’s note",
+      "notePlaceholderLong": "Today mom cooked a wonderful dinner…",
+      "save": "Save",
+      "addNoteAria": "Add timeline note"
+    },
+    "heritage": {
+      "pageTitle": "Heritage Vault",
+      "protocol": "BEVP Protocol",
+      "hero": "My Digital Heritage Safe",
+      "heroSub": "Your multi-sig legacy configuration. Immutably secured, awaiting time-lock release.",
+      "shardStatus": "2-of-3 Shard Status",
+      "shardA": "Shard A (Local)",
+      "shardB": "Shard B (Cloud)",
+      "shardC": "Shard C (Guardian)",
+      "backedUp": "Backed Up",
+      "waitingRelease": "Waiting for Release",
+      "timeLock": "Time-Lock",
+      "targetRelease": "Target Release",
+      "year": "Year {year}",
+      "blockHeight": "Block Height {height}",
+      "csvDialer": "CSV dialer · {min}–{max}",
+      "manifest": "Manifest digest (local)",
+      "letter": "Letter of Wishes",
+      "letterBody": "Draft intent for heirs — not a legal will. Bind locale + jurisdiction in Stage 3.",
+      "preview": "Heritage preview — Shamir / death protocol is Stage 3.",
+      "legacyManifest": "Legacy Manifest",
+      "hashCertified": "Hash Certified",
+      "downloadManifest": "Download legacy manifest"
+    },
+    "shield": {
+      "pageTitle": "Experience Verification (PoE)",
+      "dropHint": "Drop OpenTimestamps proof here or tap to browse.",
+      "notOts": "Not a recognizable .ots / sandbox proof.",
+      "needDigest": "{info} — paste evidence root below to verify.",
+      "gpsHash": "GPS Hash: {hash}",
+      "blockHash": "Block Hash: {hash}",
+      "resample": "Resample Entropy",
+      "entropyHigh": "Entropy Level: High",
+      "digestLabel": "Evidence root (hex)",
+      "digestPlaceholder": "Paste evidence_root to verify against the .ots",
+      "browse": "Browse .ots",
+      "fileLoaded": "Loaded: {name}",
+      "preview": "Shield preview — full PoE hardware path is Stage 4.",
+      "physicalSig": "PHYSICAL SIGNATURE DETECTED",
+      "bumpSuccess": "BUMP_SUCCESS: Keys exchanged securely.",
+      "verifyOts": "Verify .ots File",
+      "merklePath": "Merkle Path to BTC Genesis",
+      "txDemo": "Tx: 8a4c2…9f01",
+      "blockDemo": "Block: 840,001",
+      "anchoredDemo": "Anchored: demo path · offline verify in bevp-verifier",
+      "openMempool": "Open mempool.space"
+    }
+  }
+}

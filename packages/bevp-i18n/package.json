@@ -1,0 +1,29 @@
+{
+  "name": "@bevp/i18n",
+  "version": "0.1.0",
+  "description": "BEVP static Language Pack — zh/en client dictionaries (no cloud translation)",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./locales/en.json": "./locales/en.json",
+    "./locales/zh.json": "./locales/zh.json"
+  },
+  "files": ["src", "locales", "LICENSE", "README.md"],
+  "scripts": {
+    "test": "node --test 'test/**/*.test.js'",
+    "build": "echo \"No build step yet\""
+  },
+  "keywords": ["bevp", "i18n", "l10n"],
+  "author": "BEVP Foundation",
+  "license": "BUSL-1.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevp-org/bevp-protocol.git",
+    "directory": "packages/bevp-i18n"
+  }
+}

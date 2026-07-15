@@ -10,6 +10,7 @@
 | `@bevp/core` | npm (scoped) | [`packages/bevp-core`](./packages/bevp-core) |
 | `@bevp/ots` | npm (scoped) | [`packages/bevp-ots`](./packages/bevp-ots) |
 | `@bevp/relay-client` | npm (scoped) | [`packages/bevp-relay-client`](./packages/bevp-relay-client) |
+| `@bevp/i18n` | npm (scoped) | [`packages/bevp-i18n`](./packages/bevp-i18n) |
 | `bevp-protocol` (JS umbrella) | [npm](https://www.npmjs.com/package/bevp-protocol) | [`packages/bevp-protocol`](./packages/bevp-protocol) |
 
 Homepage: [https://bevp.org](https://bevp.org) · Repository: [github.com/bevp-org/bevp-protocol](https://github.com/bevp-org/bevp-protocol)
@@ -36,6 +37,7 @@ bevp-protocol/
 │   ├── bevp-core/             # @bevp/core — vow commitments (+ media digests)
 │   ├── bevp-ots/              # @bevp/ots — OpenTimestamps stamp/upgrade/verify
 │   ├── bevp-relay-client/     # @bevp/relay-client — pay/queue/rush thin client
+│   ├── bevp-i18n/             # @bevp/i18n — static zh/en Language Pack
 │   └── bevp-protocol/         # umbrella re-exports (legacy npm name)
 ├── scripts/release.sh         # Publish helper
 └── .github/SECURITY.md
@@ -45,6 +47,7 @@ bevp-protocol/
 - `/packages/bevp-core` — Stage 1 `commitVow` / `bevp:vow:v1` evidence roots.
 - `/packages/bevp-ots` — OTS stamp / upgrade / verify (public calendars; Signet needs custom URLs).
 - `/packages/bevp-relay-client` — Sponsor Relay pay intent + stamp job client (mock or HTTP).
+- `/packages/bevp-i18n` — Static zh/en dictionaries (`t` / `setLocale`); no cloud translation.
 - `/packages/bevp-crypto` also exports Shamir 2-of-3 + Passkey helpers.
 - `/packages/bevp-core` also exports Merkle-DAG root/proof helpers.
 - Calendar Gas / Stripe secrets stay in private `bevp-relay-server`.

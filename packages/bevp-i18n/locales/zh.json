@@ -1,0 +1,205 @@
+{
+  "protocol": {
+    "name": "BEVP（比特币经历验证协议）",
+    "tagline": "让经历穿越时间，用物理法则封存生命的意义",
+    "slogan": "比特币让财富拥有不可篡改的过去；BEVP 让人生拥有不可遗忘的过去。",
+    "poweredBy": "由 BEVP 驱动",
+    "pillars": {
+      "trust": "可信",
+      "actual": "真实",
+      "privacy": "私密",
+      "heritage": "传承"
+    }
+  },
+  "stages": {
+    "vows": {
+      "title": "Eternal Vows（永恒誓言）",
+      "tagline": "在不可逆的时间长河中，封存我们的创世承诺。",
+      "desc": "将誓言转化为不可逆的链下状态，隐形锚定于比特币主网。"
+    },
+    "vault": {
+      "title": "Eternal Vault（家庭时光轴）",
+      "tagline": "属于您家庭印记的私密编年史。",
+      "desc": "利用 Merkle-DAG 关系图谱，由家庭多方公钥共同记录生命轨迹。"
+    },
+    "heritage": {
+      "title": "Eternal Heritage（永恒传承）",
+      "tagline": "由数学法则与时间锁守护的数字遗产。",
+      "desc": "结合 Shamir 门限拆分与时间锁，在生命终局时安全移交记忆与资产。"
+    },
+    "shield": {
+      "title": "Reality Shield（真实之盾）",
+      "tagline": "硅基智能时代，碳基人类真实经历的起源证书。",
+      "desc": "通过物理时空熵交叉校验，生成人类起源证书。"
+    }
+  },
+  "legal": {
+    "framework": "中华人民共和国民法典 继承编 适用模版",
+    "executor": "遗嘱执行人",
+    "custodian": "遗产管理人",
+    "guardian": "意定监护人",
+    "document_title": "数字遗产处置意愿书",
+    "disclaimer": "本意愿书仅供与正式遗嘱/律师流程结合使用，不构成法律意见，亦不自动成为有效遗嘱。",
+    "time_lock_warning": "时间锁已激活。在到达设定区块高度之前，无法强行解密此数据。"
+  },
+  "common": {
+    "seal": "一键封存",
+    "close": "关闭",
+    "sign": "签署",
+    "reject": "拒绝",
+    "open": "打开",
+    "add": "添加",
+    "cancel": "取消",
+    "locked": "已锁定",
+    "verifying": "正在对比比特币区块…",
+    "verify_success": "经历验证通过！此数据确曾在所指区块高度存在且未经篡改。",
+    "backup_prompt": "请下载并离线保存您的自救验证器，确保无网时仍可校验证明。"
+  },
+  "nav": {
+    "primary": "主导航",
+    "vows": "誓言",
+    "vault": "时光轴",
+    "heritage": "传承",
+    "shield": "真盾"
+  },
+  "lang": {
+    "label": "语言",
+    "en": "EN",
+    "zh": "中文"
+  },
+  "pwa": {
+    "vows": {
+      "pageTitle": "创建永恒誓言",
+      "history": "誓言历史",
+      "partnerA": "伴侣一",
+      "partnerB": "伴侣二",
+      "vowAria": "誓言正文",
+      "defaultText": "在不可逆的时间长河中，我们承诺……",
+      "recordVoice": "录制语音",
+      "stopRecording": "停止录音",
+      "uploadPhoto": "上传照片",
+      "removePhoto": "移除照片",
+      "removeAudio": "移除语音",
+      "photoBytes": "照片 · {n} B",
+      "voiceBytes": "语音 · {n} B",
+      "recording": "录音中…",
+      "micDenied": "麦克风权限被拒绝或不可用。",
+      "anchorTier": "锚定档位",
+      "tierQueue": "排队 · {fee}（批量）",
+      "tierRush": "加急 · {fee}（优先）",
+      "relayMode": "中继 · {mode}",
+      "statusAnchored": "已锚定",
+      "statusPending": "排队待确认",
+      "statusLocal": "仅本地",
+      "anchorProgress": "锚定进度",
+      "hashing": "正在哈希誓言与媒体摘要…",
+      "relayPay": "中继支付（{fee}，{mode}）…",
+      "relayJob": "中继任务 {id}… · {status} · 提交 OTS（{network}）…",
+      "relayFail": "中继支付失败：{message}",
+      "calendarUnreachable": "日历不可达 — 使用沙箱证明。{message}",
+      "upgradeTry": "尝试升级日历证明…",
+      "attested": "已具备比特币可验证证明。",
+      "stampStored": "印章已保存 — 日历确认后可升级。",
+      "submitOts": "正在提交 OTS 日历（{network}）…"
+    },
+    "seal": {
+      "drag": "拖动以封印并锚定",
+      "waiting": "等待封印",
+      "sealing": "封印中…",
+      "sealed": "已封印（本地）",
+      "aria": "滑动以封印誓言"
+    },
+    "anchor": {
+      "step1": "本地证据根（SHA-256）",
+      "step2": "OTS 日历盖章",
+      "step3": "比特币证明（升级）",
+      "inProgress": "进行中…",
+      "sandboxPending": "沙箱待确认（离线）。",
+      "upgraded": "日历证明已升级。",
+      "pendingAgg": "等待日历聚合。",
+      "verifiable": "可独立验证的比特币证明。",
+      "waitingBlock": "等待区块纳入 — 在此之前适用免费/测试网水印。"
+    },
+    "cert": {
+      "title": "数字羊皮纸证书",
+      "evidenceRoot": "证据根",
+      "sealedAt": "封印时间",
+      "photoDigest": "照片摘要",
+      "audioDigest": "语音摘要",
+      "otsStatus": "OTS 状态",
+      "blockHeight": "区块高度",
+      "attested": "证明时间",
+      "wmLocal": "免费 · 仅本地封印",
+      "wmAnchored": "已锚定 · 可用 Verifier 离线验证",
+      "wmSandbox": "免费 / 沙箱 · 未锚定比特币",
+      "wmPending": "免费 / 待确认 · 日历盖章（尚不可独立验证）",
+      "disclaimer": "在 OTS 状态升级为已确认前，请勿宣称「已永久写入比特币主网」。",
+      "downloadOts": "下载 .ots 证明",
+      "openVerifier": "打开离线验证器",
+      "close": "关闭证书",
+      "closeAria": "关闭证书"
+    },
+    "vault": {
+      "pageTitle": "我们的家庭时光轴",
+      "cosign": "Bob 请求为「家庭晚餐」签名 — MuSig2",
+      "addMoment": "添加片刻",
+      "notePlaceholder": "值得记住的小小喜悦…",
+      "defaultNote": "今日小确幸",
+      "preview": "时光轴预览 — 完整家庭 ARR 属于阶段二。",
+      "verifyBlock": "验证区块",
+      "viewNodeHash": "查看节点哈希",
+      "verifySignature": "验证签名",
+      "addNoteTitle": "添加今日随记",
+      "notePlaceholderLong": "今天妈妈做了一顿很棒的晚餐…",
+      "save": "保存",
+      "addNoteAria": "添加时光轴随记"
+    },
+    "heritage": {
+      "pageTitle": "传承金库",
+      "protocol": "BEVP 协议",
+      "hero": "我的数字传承保险箱",
+      "heroSub": "多方签名遗产配置。不可篡改地封存，等待时间锁释放。",
+      "shardStatus": "2-of-3 分片状态",
+      "shardA": "分片 A（本地）",
+      "shardB": "分片 B（云端）",
+      "shardC": "分片 C（监护人）",
+      "backedUp": "已备份",
+      "waitingRelease": "等待释放",
+      "timeLock": "时间锁",
+      "targetRelease": "目标释放",
+      "year": "{year} 年",
+      "blockHeight": "区块高度 {height}",
+      "csvDialer": "CSV 拨盘 · {min}–{max}",
+      "manifest": "清单摘要（本地）",
+      "letter": "遗愿清单",
+      "letterBody": "给继承人的意向草稿 — 并非正式遗嘱。阶段三将绑定语言与法域。",
+      "preview": "传承预览 — Shamir / 死亡协议属于阶段三。",
+      "legacyManifest": "遗产清单",
+      "hashCertified": "哈希已认证",
+      "downloadManifest": "下载遗产清单"
+    },
+    "shield": {
+      "pageTitle": "经历验证（PoE）",
+      "dropHint": "将 OpenTimestamps 证明拖到此处，或点按浏览。",
+      "notOts": "无法识别为 .ots / 沙箱证明。",
+      "needDigest": "{info} — 请在下方粘贴证据根以验证。",
+      "gpsHash": "GPS 哈希：{hash}",
+      "blockHash": "区块标签：{hash}",
+      "resample": "重采样熵",
+      "entropyHigh": "熵水平：高",
+      "digestLabel": "证据根（十六进制）",
+      "digestPlaceholder": "粘贴 evidence_root 以对照 .ots 验证",
+      "browse": "浏览 .ots",
+      "fileLoaded": "已加载：{name}",
+      "preview": "真盾预览 — 完整 PoE 硬件路径属于阶段四。",
+      "physicalSig": "检测到物理签名",
+      "bumpSuccess": "碰一碰成功：密钥已安全交换。",
+      "verifyOts": "验证 .ots 文件",
+      "merklePath": "通往比特币创世的 Merkle 路径",
+      "txDemo": "交易：8a4c2…9f01",
+      "blockDemo": "区块：840,001",
+      "anchoredDemo": "已锚定：演示路径 · 请在 bevp-verifier 离线验证",
+      "openMempool": "打开 mempool.space"
+    }
+  }
+}
